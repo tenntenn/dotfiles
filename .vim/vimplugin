@@ -28,7 +28,7 @@ NeoBundle 'git://github.com/Shougo/unite-build.git'
 " neocomplcache
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 " neocomplcache-snippets-complete
-NeoBundle 'git://github.com/Shougo/neosnippet.git'
+"NeoBundle 'git://github.com/Shougo/neosnippet.git'
 " vimfiler
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 " vim-quickrun
@@ -47,6 +47,7 @@ NeoBundle 'git://github.com/vim-scripts/sudo.vim.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 " NERDTree.vim
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+nmap <silent> <F9> :NERDTreeToggle<CR>
 " vim-powerline
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 " vim-easymotion
@@ -67,7 +68,7 @@ NeoBundle 'git://github.com/scrooloose/syntastic.git'
 " ropevim
 " require : rope, ropemode
 " pip install rope ropemode
-NeoBundle 'git://github.com/sontek/rope-vim'
+"NeoBundle 'git://github.com/sontek/rope-vim'
 " jedi-vim
 NeoBundle 'git://github.com/davidhalter/jedi-vim.git'
 " simple-javascript-indenter
@@ -75,7 +76,31 @@ NeoBundle 'git://github.com/jiangmiao/simple-javascript-indenter.git'
 " vim-javascript-syntax
 NeoBundle 'git://github.com/jelera/vim-javascript-syntax.git'
 " jscomplete-vim
-NeoBundle 'git://github.com/teramako/jscomplete-vim.git'
+"NeoBundle 'git://github.com/teramako/jscomplete-vim.git'
+" vim-go
+NeoBundle 'fatih/vim-go'
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>dd <Plug>(go-def)
+au FileType go nmap <Leader>dp <Plug>(go-def-pop)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
 
 "--------------------
 " color scheme
@@ -295,3 +320,8 @@ let g:SimpleJsIndenter_CaseIndentLevel = -1
 "----------------------------------------
 autocmd FileType javascript :setl omnifunc=jscomplete#CompleteJS
 
+NeoBundle 'majutsushi/tagbar.git'
+
+let g:tagbar_left = 0
+let g:tagbar_autofocus = 1
+nmap <silent> <F8> :TagbarToggle<CR>
