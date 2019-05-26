@@ -28,3 +28,9 @@
     noskip = update-index --no-skip-worktree
 
     alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
+
+[url "git@github.com:"]
+      insteadOf = https://github.com/
+[user]
+	email = uedatakuya@gmail.com
+	name = Takuya Ueda
