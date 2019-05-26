@@ -18,8 +18,8 @@ how to use
 が追加されます。
 
 ### 2. submodules
-    git submodules init
-    git submodules update
+    git submodule init
+    git submodule update
 
 ### 3. restart zsh
 zshを再起動するとzshプラグインがgit cloneされます。
